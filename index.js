@@ -20,7 +20,7 @@ const client = new MongoClient(uri, {
 const run = async () => {
   try {
     await client.connect();
-    const database = client.db("watch_world");
+    const database = client.db("car-rotors");
     const productsCollection = database.collection("products");
     const orderCollection = database.collection("orders");
     const reviewCollection = database.collection("reviews");
@@ -140,7 +140,7 @@ const run = async () => {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("This is home");
+  res.send("ROTORS CARS SERVER SIDE");
 });
 
 app.listen(port, () => {
